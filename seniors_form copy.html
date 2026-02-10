@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learner Enrollment Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('TaalHighSchool.png') no-repeat center center fixed;
+  background-size: cover;
+  padding: 20px;
+}
+
+.form{
+  background:#fff;
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+  border:2px solid #000;
+}
+
+h3{
+  text-align:center;
+  margin:10px 0;
+  border:1px solid #000;
+  padding:5px;
+  background:#eaeaea;
+}
+
+.row{
+  display:flex;
+  gap:10px;
+  margin-bottom:10px;
+  flex-wrap:wrap;
+}
+
+.field{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  font-size:12px;
+}
+
+label{
+  font-weight:bold;
+  margin-bottom:3px;
+}
+
+input, select{
+  border:1px solid #000;
+  padding:5px;
+  height:30px;
+}
+
+.section-box{
+  border:1px solid #000;
+  padding:10px;
+  margin-bottom:15px;
+}
+
+.address-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+}
+
+.address-grid .wide{
+  grid-column:span 2;
+}
+
+.enroll-btn{
+  background:#000;
+  color:#fff;
+  border:1px solid #000;
+  padding:10px 50px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.enroll-btn:hover{
+  background:#333;
+}
+</style>
+</head>
+
+<body>
+
+<div class="form">
+<form>
+
+<!-- TOP INFO -->
+<div class="row">
+  <div class="field">
+    <label>School Year</label>
+    <input type="text" name="schoolYear" placeholder="Ex: 2025-2026">
+  </div>
+
+  <div class="field">
+    <label>Grade Level to Enroll</label>
+    <select name="gradeLevel">
+      <option value="">Select</option>
+      <option value="Grade 11">Grade 11</option>
+      <option value="Grade 12">Grade 12</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>With LRN</label>
+    <select name="lrn">
+      <option value="">Select</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Returning (Balik-Aral)</label>
+    <select name="returning">
+      <option value="">Select</option>
+      <option>Yes</option>
+      <option>No</option>
+    </select>
+  </div>
+</div>
+
+
+<h3>LEARNER INFORMATION</h3>
+
+<div class="row">
+  <div class="field"><label>PSA No.</label><input type="text" name="psa"></div>
+  <div class="field"><label>LRN</label><input type="text" name="lrn"></div>
+</div>
+
+<div class="row">
+  <div class="field"><label>Last Name</label><input type="text" name="lastName"></div>
+  <div class="field"><label>First Name</label><input type="text" name="firstName"></div>
+  <div class="field"><label>Middle Name</label><input type="text" name="middleName"></div>
+</div>
+
+<div class="row">
+  <div class="field"><label>Extension</label><input type="text" name="extension"></div>
+  <div class="field"><label>Birthdate</label><input type="date" name="birthdate"></div>
+
+  <div class="field">
+    <label>Sex</label>
+    <select name="sex">
+      <option value="">Select</option>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+  </div>
+
+ <div class="field">
+  <label>Age</label>
+  <input type="number" name="age">
+</div>
+</div>
+
+<div class="row">
+  <div class="field"><label>Place of Birth</label><input type="text" name="placeOfBirth"></div>
+  <div class="field"><label>Mother Tongue</label><input type="text" name="motherTongue"></div>
+</div>
+
+<h3>ADDRESS</h3>
+
+<div class="address-grid">
+  <div class="field"><label>House No.</label><input type="text" name="houseNo"></div>
+  <div class="field wide"><label>Street</label><input type="text" name="street"></div>
+  <div class="field"><label>Barangay</label><input type="text" name="barangay"></div>
+  <div class="field"><label>City</label><input type="text" name="city"></div>
+  <div class="field wide"><label>Province</label><input type="text" name="province"></div>
+  <div class="field"><label>Zip Code</label><input type="text" name="zipCode" maxlength="4"></div>
+</div>
+
+<h3>PARENT / GUARDIAN INFORMATION</h3>
+
+<div class="row">
+  <div class="field"><label>Father's Name</label><input type="text" name="fatherName"></div>
+  <div class="field"><label>Contact Number</label><input type="text" name="fatherContact" maxlength="11"></div>
+</div>
+
+<div class="row">
+  <div class="field"><label>Mother's Maiden Name</label><input type="text" name="motherName"></div>
+  <div class="field"><label>Contact Number</label><input type="text" name="motherContact" maxlength="11"></div>
+</div>
+
+<div class="row">
+  <div class="field"><label>Guardian Name</label><input type="text" name="guardianName"></div>
+  <div class="field"><label>Contact Number</label><input type="text" name="guardianContact" maxlength="11"></div>
+</div>
+
+<h3>FOR SENIOR HIGH SCHOOL</h3>
+
+<div class="row">
+  <div class="field">
+    <label>Semester</label>
+    <select name="semester">
+      <option value="">Select</option>
+      <option>1st Sem</option>
+      <option>2nd Sem</option>
+    </select>
+  </div>
+
+  <div class="field" style="flex:2">
+    <label>Strand</label>
+    <select name="strand">
+      <option value="">Select Strand</option>
+      <option>Computer Programming</option>
+      <option>Human and Social Science</option>
+      <option>General Academic Strand</option>
+      <option>Science, Technology, Engineering, and Mathematics</option>
+      <option>Accountancy Buissness and Management</option>
+      <option>Home Economics</option>
+      <option>Consumer Electronics</option>
+    </select>
+  </div>
+</div>
+
+<h3>OPTIONAL INFORMATION</h3>
+
+<div class="section-box">
+  <label>Belonging to IP Community?</label>
+  <select name="ip">
+    <option value="">Select</option>
+    <option>Yes</option>
+    <option>No</option>
+  </select>
+  <br><br>
+  <input type="text" placeholder="If yes, specify">
+</div>
+
+<div class="section-box">
+  <label>Learner with Disability?</label>
+  <select name="disability">
+    <option value="">Select</option>
+    <option>Yes</option>
+    <option>No</option>
+  </select>
+  <br><br>
+  <label>Disability Type</label>
+  <select name="disType">
+    <option value="">Select</option>
+    <option>Visual Impairment</option>
+    <option>Hearing Impairment</option>
+    <option>Learning Disability</option>
+    <option>Intellectual Disability</option>
+  </select>
+</div>
+
+<div class="section-box">
+  <label>Are you a 4P's Community?</label>
+  <select name="4P's">
+    <option value="">Select</option>
+    <option>Yes</option>
+    <option>No</option>
+  </select>
+  <br><br>
+  <input type="text" placeholder="4P's Household ID">
+</div>
+
+<div style="text-align:center;margin-top:20px;">
+  <button type="button" class="enroll-btn" onclick="goToSuccess()">ENROLL</button>
+</div>
+
+</form>
+</div>
+
+<script>
+async function goToSuccess() {
+    const schoolYear = document.querySelector('input[name="schoolYear"]');
+    const gradeLevel = document.querySelector('select[name="gradeLevel"]');
+    const psa = document.querySelector('input[name="psa"]');
+    const lrn = document.querySelector('input[name="lrn"]');
+    const lastName = document.querySelector('input[name="lastName"]');
+    const firstName = document.querySelector('input[name="firstName"]');
+    const middleName = document.querySelector('input[name="middleName"]');
+    const birthdate = document.querySelector('input[name="birthdate"]');
+    const sex = document.querySelector('select[name="sex"]');
+    const age = document.querySelector('input[name="age"]');
+    const placeOfBirth = document.querySelector('input[name="placeOfBirth"]');
+    const motherTongue = document.querySelector('input[name="motherTongue"]');
+    const houseNo = document.querySelector('input[name="houseNo"]');
+    const street = document.querySelector('input[name="street"]');
+    const barangay = document.querySelector('input[name="barangay"]');
+    const city = document.querySelector('input[name="city"]');
+    const province = document.querySelector('input[name="province"]');
+    const zipCode = document.querySelector('input[name="zipCode"]');
+    const fatherName = document.querySelector('input[name="fatherName"]');
+    const fatherContact = document.querySelector('input[name="fatherContact"]');
+    const motherName = document.querySelector('input[name="motherName"]');
+    const motherContact = document.querySelector('input[name="motherContact"]');
+    const guardianName = document.querySelector('input[name="guardianName"]');
+    const guardianContact = document.querySelector('input[name="guardianContact"]');
+    const semester = document.querySelector('select[name="semester"]');
+    const strand = document.querySelector('select[name="strand"]');
+
+    // Calculate age
+    if (birthdate.value) {
+        const today = new Date();
+        const birth = new Date(birthdate.value);
+        let calculatedAge = today.getFullYear() - birth.getFullYear();
+        const monthDiff = today.getMonth() - birth.getMonth();
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birth.getDate())) {
+            calculatedAge--;
+        }
+        age.value = parseInt(calculatedAge);
+    }
+
+    const requiredFields = [
+        { field: schoolYear, name: 'School Year' },
+        { field: gradeLevel, name: 'Grade Level to Enroll' },
+        { field: psa, name: 'PSA No.' },
+        { field: lrn, name: 'LRN', type: 'int' },
+        { field: lastName, name: 'Last Name' },
+        { field: firstName, name: 'First Name' },
+        { field: middleName, name: 'Middle Name' },
+        { field: birthdate, name: 'Birthdate' },
+        { field: sex, name: 'Sex' },
+        { field: age, name: 'Age', type: 'int' },
+        { field: placeOfBirth, name: 'Place of Birth' },
+        { field: motherTongue, name: 'Mother Tongue' },
+        { field: houseNo, name: 'House No.' },
+        { field: street, name: 'Street' },
+        { field: barangay, name: 'Barangay' },
+        { field: city, name: 'City' },
+        { field: province, name: 'Province' },
+        { field: zipCode, name: 'Zip Code', type: 'int', maxLength: 4 },
+        { field: fatherName, name: "Father's Name" },
+        { field: fatherContact, name: "Father's Contact", type: 'int', maxLength: 11 },
+        { field: motherName, name: "Mother's Name" },
+        { field: motherContact, name: "Mother's Contact", type: 'int', maxLength: 11 },
+        { field: guardianName, name: "Guardian's Name" },
+        { field: guardianContact, name: "Guardian's Contact", type: 'int', maxLength: 11 },
+        { field: semester, name: 'Semester' },
+        { field: strand, name: 'Strand' }
+    ];
+
+    // Validation
+    for (let i = 0; i < requiredFields.length; i++) {
+        const { field, name, type, maxLength } = requiredFields[i];
+        if (!field.value || field.value.trim() === '') {
+            alert(`Please fill out your information: ${name}`);
+            field.focus();
+            return;
+        }
+        if (type === 'int') {
+            if (isNaN(field.value)) {
+                alert(`${name} must be a number`);
+                field.focus();
+                return;
+            }
+            if (maxLength && field.value.length > maxLength) {
+                alert(`${name} must not exceed ${maxLength} digits`);
+                field.focus();
+                return;
+            }
+        }
+    }
+
+    // 🔥 Firebase Data Object
+    const studentData = {
+        schoolYear: schoolYear.value,
+        gradeLevel: gradeLevel.value,
+        psa: psa.value,
+        lrn: lrn.value,
+        lastName: lastName.value,
+        firstName: firstName.value,
+        middleName: middleName.value,
+        birthdate: birthdate.value,
+        sex: sex.value,
+        age: age.value,
+        placeOfBirth: placeOfBirth.value,
+        motherTongue: motherTongue.value,
+        address: {
+            houseNo: houseNo.value,
+            street: street.value,
+            barangay: barangay.value,
+            city: city.value,
+            province: province.value,
+            zipCode: zipCode.value
+        },
+        parents: {
+            father: { name: fatherName.value, contact: fatherContact.value },
+            mother: { name: motherName.value, contact: motherContact.value },
+            guardian: { name: guardianName.value, contact: guardianContact.value }
+        },
+        semester: semester.value,
+        strand: strand.value,
+        timestamp: new Date().toISOString()
+    };
+
+    try {
+        // 🔥 Send to Firebase
+        await fetch("https://enrollease---enrollment-form-default-rtdb.asia-southeast1.firebasedatabase.app/SHS-Students.json", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(studentData)
+        });
+
+        // Redirect after success
+        window.location.href = "successfull.html";
+
+    } catch (error) {
+        alert("Error saving to database. Please try again.");
+        console.error(error);
+    }
+}
+</script>
+
+</body>
+</html>

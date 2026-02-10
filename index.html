@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: 
+        linear-gradient(rgba(163, 163, 163, 0.5), rgba(175, 173, 173, 0.5)),
+        url("TaalHighSchool.png") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: black;
+    }
+
+     .top-left-images {
+      position: fixed;   /* stays in top-left even when scrolling */
+      top: 10px;
+      left: 10px;
+      display: flex;
+      flex-direction: column; /* stack images vertically */
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .top-left-images img {
+      width: 115px;   /* adjust size */
+      height: auto;
+    }
+
+         .top-left-images-2 {
+      position: fixed;   /* stays in top-left even when scrolling */
+      top: 10px;
+      left: 140px;
+      display: flex;
+      flex-direction: column; /* stack images vertically */
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .top-left-images-2 img {
+      width: 115px;   /* adjust size */
+      height: auto;
+    }
+
+    .login-box {
+      background-color: rgba(60, 161, 255, 0.9); /* light blue with transparency */
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-box h1 {
+      font-size: 45px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #000;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    input:focus {
+      border-color: #4da6ff;
+      outline: none;
+      box-shadow: 0 0 5px #4da6ff;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #123d69;
+      border: none;
+      color: rgb(231, 229, 235);
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #007acc;
+    }
+
+    .footer-text {
+      margin-top: 15px;
+      font-size: 13px;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+<div class="top-left-images">
+    <img src="DepED-Logo-500x281 (1).png" alt="Image 1">
+  </div>
+  <div class="top-left-images-2">
+  <img src="taal-removebg-preview.png" alt="Image 2">
+  </div>
+
+  <div class="login-box">
+    <h1>LOGIN</h1>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <div class="footer-text">Welcome to Taal High School</div>
+  </div>
+
+<script>
+function login() {
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value.trim();
+
+  if (username === "teacher" && password === "teach123") {
+    window.location.href = "management.html";
+  } else if (username === "admin" && password === "1234") {
+    window.location.href = "management.html";
+  } else if (username === "student" && password === "5678") {
+    window.location.href = "index.html";
+  } else {
+    alert("Invalid username or password");
+  }
+}
+
+// Allow Enter key to trigger login
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    login();
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Enrollment Form </title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      color: #fff;
+    }
+
+             .top-left-images {
+      position: fixed;   /* stays in top-left even when scrolling */
+      top: 65px;
+      left: 10px;
+      display: flex;
+      flex-direction: column; /* stack images vertically */
+      gap: 8px;
+      z-index: 1000;
+    }
+
+    .top-left-images img {
+      width: 115px;   /* adjust size */
+      height: auto;
+    }
+
+         .top-left-images-2 {
+      position: fixed;   /* stays in top-left even when scrolling */
+      top: 65px;
+      left: 140px;
+      display: flex;
+      flex-direction: column; /* stack images vertically */
+      gap: 8px;
+      z-index: 1000;
+    }
+
+        .top-left-images-2 img {
+      width: 115px;   /* adjust size */
+      height: auto;
+    }
+
+    /* NAVBAR */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    header h1 {
+      font-size: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: 
+linear-gradient(rgba(0, 60, 120, 0.6), rgba(0, 60, 120, 0.6)),
+        url("TaalHighSchool.png");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero-content h2 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero-content p {
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    /* BUTTONS */
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background: #1e90ff;
+      color: #fff;
+      padding: 12px 28px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #187bcd;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #1e90ff;
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: #1e90ff;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .hero-content h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+      <div class="top-left-images">
+    <img src="DepED-Logo-500x281 (1).png" alt="Image 1">
+  </div>
+  <div class="top-left-images-2">
+  <img src="taal-removebg-preview.png" alt="Image 2">
+  </div>
+
+  <header>
+    <h1>Enrollment Form</h1>
+    <nav>
+      <a href="#">About</a>
+      <a href="newlogin.html">Log out</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Online Enrollment Made Simple</h2>
+      <p>
+        A seamless digital enrollment experience.
+      </p>
+
+      <div class="btn-group">
+        <a href="juniors.html" class="btn">JHS Enrollment Form</a>
+        <a href="seniors_form copy.html" class="btn">SHS Enrollment Form</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
